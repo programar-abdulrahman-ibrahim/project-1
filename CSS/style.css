@@ -1,0 +1,777 @@
+ *{
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-family: "Exo 2", sans-serif;
+}
+
+ html{
+  scroll-behavior: smooth;
+}
+
+ :root{
+  --font-color:  white;
+  --background-color: blueviolet;
+  --btn-color: rgb(235, 118, 55);
+}
+
+  /*global rules*/
+
+    .containar{
+      padding-left: 15px;
+      padding-right: 15px;
+      margin-left: auto ;
+      margin-right: auto ;
+    }
+
+    /*small*/
+    @media (min-width: 768px ) {
+      .containar{
+        width: 750px;
+      }
+    }
+    /*midyom*/
+    @media (min-width: 992px ) {
+      .containar{
+        width: 970px ;
+      }
+    }
+    /*larg*/
+    @media (min-width: 1200px ) {
+      .containar{
+        width: 1170px ;
+      }
+    }
+  
+  /* End global rules*/
+
+  
+  /* hedear */
+
+    header{
+      background-color: var(--background-color);
+    }
+
+    header .containar{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header .containar .logo a{
+      color: var(--font-color);
+      font-weight: 900;
+      font-size: 30px;
+    }
+    
+    header .containar ul{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header .containar ul li{
+      list-style: none;
+      width: 100px;
+    }
+
+    header .containar ul li a{
+      color: var(--font-color);
+      padding: 5px;
+      transition: .5s;
+
+    }
+
+    header .containar ul li a:hover{
+      color: var(--background-color);
+      background-color: var(--font-color);
+      border-radius: 5px;
+    }
+
+
+
+    header .containar .btn-1{
+      background-color: var(--btn-color);
+      padding: 5px;
+      border-radius: 5px;
+      width: 110px;
+      text-align: center;
+      transition: 0.3s;
+      min-width: 100px;
+    }
+
+    header .containar .btn-1:hover{
+      margin-bottom: 3px;
+    }
+
+    header .links .icon{
+      display: none;
+    }
+
+    @media (max-width: 768px ) {
+
+      header{
+        padding: 20px;
+      }
+      
+      header .containar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+      header .links{
+      position: relative;
+      }
+      
+      header .links .icon{
+        font-size: 35px;
+        display: block;
+        color: var(--font-color);
+      }
+      
+      header .links ul{
+        margin: 0px;
+        padding: 0px;
+        background-color: var(--font-color);
+        position: absolute;
+        right: 0;
+        top: calc(100% + 15px);
+        border-radius: 6px;
+        border: 2px solid var(--btn-color);
+        display: none;
+        z-index: 1;
+      }
+      
+      
+      header .links ul::before{
+        content: "";
+        border-width: 10px;
+        border-style: solid;
+        border-color: transparent transparent var(--font-color) transparent;
+        position: absolute;
+        right: 5px;
+        top: -20px;
+      }
+      
+      header .links:hover ul{
+        display: block;  
+      }
+      
+      header .links ul li a{
+        display: block;
+        padding: 15px;
+        text-decoration: none;
+        color: #333;
+        font-size: 13px;
+        transition: 0.3s;
+      }
+      
+      header .links ul li a:hover{
+        padding-left: 20px;
+        background-color: var(--btn-color);
+        color: var(--font-color);
+      }
+      
+      header .links ul li:not(:last-child) a{
+        border-bottom: 1px solid #ddd;
+      }
+
+      header .containar .btn-1{
+        display: none;
+      }
+
+    }
+  
+  /* end hedear */
+
+
+  /* main  || A-1*/
+
+    main{
+      background-color:var(--background-color);
+      height: 600px;
+      border-bottom-right-radius: 150px;
+      position: relative;
+    }
+
+    main .containar{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50% , -50%);
+    }
+
+    main .img img{
+      width: 400px;
+    }
+
+    main .pragraf{
+      width: 50%;
+      position: relative;
+    }
+
+    main .pragraf  h1{
+      color: var(--font-color);
+      text-align: center;
+    }
+
+    main .pragraf p{
+      color: var(--font-color);
+      text-align: center;
+    }
+
+    main .pragraf .btn-2{
+      background-color: var(--btn-color);
+      width: 100px;
+      text-align: center;
+      padding:10px ;
+      border-radius: 5px;
+      position: absolute;
+      left: 50%;
+      top: 110%;
+      transform: translate(-50% , -50%);
+      transition: 0.3s;
+    }
+
+    main .pragraf .btn-2:hover{
+      top: 109%;
+      transform: translate(-50% , -50%);
+    }
+
+    @media (max-width: 500px ) {
+      main .containar{
+        display: block;
+      }
+
+      main{
+        position: relative;
+        height: 700px;
+      }
+
+      main .img img{
+        width: 300px;
+      }
+
+      main .pragraf{
+        width: 100%;
+        text-align: center;
+      }
+
+      main .pragraf .btn-2{
+        margin-top: 30px;
+      }
+
+
+    }
+
+  /* end main || A-1*/
+
+
+  /* A-2 */
+
+    .services{
+      position: relative;
+      height: 500px;
+    }
+
+    .services h1{
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .services .para{
+      text-align: center;
+    }
+
+    .services .divide{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .services .divide div{
+      width: 24%;
+      padding: 10px;
+      padding-bottom: 20px;
+      text-align: center;
+      border-radius: 15px;
+      position: relative;
+      box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.232);
+      transition: 1s;
+    }
+
+    .services .divide div:hover{
+      background-color: var(--background-color);
+      color: var(--font-color);
+    }
+
+    .services .divide .div-margin{
+      margin-left: 0px;
+    }
+    .services .divide div img{
+      width: 100PX;
+      padding: 15px;
+    }
+
+
+
+    .services .divide div .btn-r{
+      font-size: 16px;
+      color: black;
+      transition: 0.3s;
+    }
+
+    .services .divide div .btn-r:hover{
+      color: var(--font-color);
+    }
+    .services .btn-3{
+      width: 150px;
+      text-align: center;
+      color: var(--font-color);
+      background-color:var(--background-color);
+      padding: 5px;
+      border-radius: 5px;
+      position: absolute;
+      left: 50%;
+      bottom:10%;
+      transform: translate(-50% , -5%);
+      transition: 0.3s;
+    }
+
+    .services .btn-3:hover{
+      bottom:10.5%;
+      transform: translate(-50% , -5%);
+    }
+
+
+    @media (max-width: 768px ) {
+
+      .services{
+        height: auto;
+      }
+      .services .divide{
+        display: grid;
+        grid-template-columns: 49% 49%;
+        justify-content: space-between;
+      }
+
+      .services .divide div{
+        width: 100%;
+        margin: 20px auto;
+      }
+
+      .services .btn-3{
+        display: block;
+        position: relative;
+        margin: 10px;
+        margin-bottom: 20px;
+      }
+    }
+
+    @media (max-width: 500px ) {
+      .services .divide{
+        grid-template-columns: 100%;
+      }
+
+      .services .divide div{
+        margin: 10px auto;
+      }
+    }
+  /* end A-2 */
+
+  /* A-3 */
+
+    .A-3{
+      background-color: var(--background-color);
+      border-bottom-right-radius: 150px;
+      border-top-left-radius:150px ;
+      
+    }
+
+    .about{
+      padding-top: 70px ;
+      padding-bottom: 70px ;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 500px;
+    }
+
+    .about img{
+      width: 250px;
+    }
+
+    .about .pragraf{
+      width: 40%;
+      color: var(--font-color);
+    }
+
+    .about .btn-4{
+      display: inline-block;
+      background-color: var(--btn-color);
+      width: 120px;
+      text-align: center;
+      padding: 5px;
+      border-radius: 5px;
+      margin-top: 30px;
+      transition: 0.3s;
+    }
+
+    .about .btn-4:hover{
+      margin-top: 35px;
+    }
+
+    @media (max-width: 500px ) {
+      .about{
+        display: block;
+        position: relative;
+        height: 700px;
+      }
+
+      .about .pragraf{
+        width: 100%;
+      }
+
+      .about img{
+        position: absolute;
+        left: 50%;
+        bottom:0% ;
+        transform: translate(-50% , -30%);
+      }
+      
+    }
+
+  /* end A-3 */
+
+
+  /* A-4 */
+
+    .studies{
+      text-align: center;
+    }
+
+    .studies h1{
+      text-align: center;
+      margin: 50px auto;
+      text-transform: uppercase;
+    }
+
+    .studies .cases{
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+
+    .studies .c-1{
+      width: 45%;
+      text-align: center;
+      box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.232);
+      padding-bottom: 5px;
+      margin-bottom: 20px;
+    }
+
+    .studies .c-1 img{
+      width: 100%;
+      height: 40%;
+    }
+
+    .studies .c-1 p{
+      padding: 5px 20px;
+    }
+
+    .studies .c-1 a{
+      display: block;
+      color: var(--background-color);
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 500px ) {
+      .studies .cases{
+        display: block;
+      }
+
+      .studies .c-1{
+        width: 100%;
+      }
+    }
+
+  /* end A-4 */
+
+
+  /* A-5 */
+
+    .person{
+      position: relative;
+      height: 500px;
+    }
+
+    .person h1{
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .person .tes{
+      position: absolute;
+      left: 50%;
+      top: 40%;
+      transform: translate(-50% , -50%);
+      width: 80%;
+      background-color: var(--background-color);
+      color: var(--font-color);
+      text-align: center;
+      border-radius: 10px;
+      position: relative;
+      padding: 20px;
+    }
+
+    .person .tes img{
+      width: 100px;
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      top: 0%;
+      transform: translate(-50% , -50%);
+      z-index: 1;
+    }
+
+    .person .tes h2{
+      margin-top: 50px;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 500px ) {
+      .person .tes{
+        margin-top: 50px;
+      }
+    }
+
+  /* end A-5 */
+
+  /* A-6 */
+
+
+    .A-6{
+      height: 500px;
+    }
+    .request{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .request .send{
+      width: 40%;
+      position: relative;
+    }
+
+    .request .send input{
+      display: block;
+      margin-top: 15px;
+      width: 100%;
+      height: 40px;
+      border: 1px solid black;
+    }
+
+    .request .send .message{
+      height: 100px;
+    }
+    .request .send .btn-5{
+      display: block;
+      background-color: var(--background-color);
+      color: var(--font-color);
+      width: 120px;
+      text-align: center;
+      padding: 5px;
+      margin-top: 30px;
+      border: transparent;
+      border-radius: 2px;
+      transition: .5s;
+    }
+
+    .request .send .btn-5:hover{
+      width: 125px;
+    }
+
+    .request .map{
+      width: 55%;
+    }
+
+    .request .map iframe{
+      width: 100%;
+      height: 400px;
+      border-radius: 15px;
+    }
+
+    @media (max-width: 500px ) {
+      .A-6{
+        height: auto;
+        padding: 20px 0px;
+      }
+
+      .request{
+        display: block;
+      }
+
+      .request .map{
+        width: 100%;
+      }
+
+      .request .send{
+        width: 100%;
+      }
+    }
+
+  /* end A-6 */
+
+  /* A-7 */
+
+    .A-7{
+      background-color: var(--background-color);
+      border-top-left-radius:150px;
+    }
+
+    .A-7 p{
+      font-size: 16px;
+    }
+    .End{
+      color:var(--font-color);
+      padding: 30px;
+    }
+
+    .End .d-1 .digian{
+      text-align: center;
+    }
+
+    .End .d-1 .media-1{
+      display: flex;
+      justify-content: space-around;
+      align-items: start;
+      width: 100%;
+    }
+
+    .End .d-1 .digian p{
+      font-size: 13px;
+    }
+
+    .End .d-1 .link{
+      width: 15%;
+    }
+    .End .d-1 .link ul{
+      text-align: left;
+      padding-inline-start: 0px;
+      padding-inline-end: 0px;
+    }
+
+    .End .d-1 .link li{
+      list-style: none;
+      padding-top: 5px;
+    }
+
+    .End .d-1 .link a{
+      color: var(--font-color);
+      font-size: 13px;
+      transition: 0.3s;
+    }
+
+    .End .d-1 .link a:hover{
+      color: var(--btn-color);
+    }
+    .End .d-1 .subscribe input{
+      width: 100%;
+      background-color: var(--background-color);
+      border-color: transparent;
+      border-bottom:2px solid var(--font-color);
+      margin-bottom: 20px;
+      color: var(--font-color);
+    }
+
+    .End .d-1 .subscribe .btn-6{
+      display: block;
+      background-color: var(--btn-color);
+      color: var(--font-color);
+      width: 100%;
+      text-align: center;
+      padding: 5px;
+      transition: 0.3s;
+      margin-top: 5px;
+      font-size: 13px;
+    }
+
+    .End .d-1 .subscribe .btn-6:hover{
+      margin-top: 1px;
+    }
+
+    .End .d-1 .address p{
+      font-size: 10px;
+    }
+
+    .End .d-1 .address a{
+      color:var(--font-color);
+      transition: 0.3s;
+    }
+
+    .End .d-1 .address a:hover{
+      color: var(--btn-color);
+    }
+
+    .End .d-1 .address .icons{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .End .d-1 .address .icons a{
+      padding-right: 7px;
+    }
+
+    .End .d-2 {
+      text-align: center;
+      font-size: 10px;
+    }
+    .End .d-2 p{
+      display: inline;
+      font-size: 10px;
+    }
+
+    .End .d-2 p i{
+      font-size: 10px;
+      color: var(--font-color);
+    }
+
+    @media (max-width: 500px ) {
+
+      .End .d-1{
+        display: block;
+      }
+      .End .d-1 .digian{
+        width: 100%;
+        text-align: center;
+      }
+
+      .End .d-1 .media-1{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+      }
+
+      .End .d-1 .media-1 .link{
+        width: 15%;
+      }
+
+      .End .d-1 .media-1 .subscribe{
+        width: 25%;
+      }
+
+      .End .d-1 .media-1 .address{
+        width: 45%;
+      }
+    }
+
+  /* end A-7 */
+
+
